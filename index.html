@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f2f7ef">
+  <meta name="description" content="Fresh groceries, pantry favorites, and little treats from Sakib's Market.">
+  <title>Sakib's Market — Good food, good mood.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement"><span>Good food, good mood. Fresh finds every day.</span><a href="#products">Shop the market <span aria-hidden="true">↗</span></a></div>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="Sakib's Market home">sakib<span>.</span><small>FRESH MARKET</small></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a class="nav-current" href="#products">Shop groceries</a>
+      <a href="#featured">Our market</a>
+      <a href="#newsletter">Recipes</a>
+    </nav>
+    <div class="header-actions">
+      <label class="header-search"><span class="visually-hidden">Search products</span><button class="mobile-search-button" id="mobile-search-button" type="button" aria-label="Open search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg></button><input id="search-input" type="search" placeholder="Search the shop"></label>
+      <button class="cart-button" id="open-cart" type="button" aria-label="Open shopping basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l1 13H4L5 8Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span>Basket</span><span class="cart-count" id="cart-count">0</span></button>
+      <button class="mobile-menu-button" id="mobile-menu-button" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation"><a href="#products">Shop groceries</a><a href="#featured">Our market</a><a href="#newsletter">Recipes</a></nav>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-image" src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&amp;fit=crop&amp;w=1900&amp;q=85" alt="Fresh colorful produce at a local grocery market">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <span class="hero-kicker"><span></span> FRESH FROM SAKIB'S MARKET</span>
+        <h1 id="hero-title">Good food.<br><em>Good mood.</em></h1>
+        <p>Fresh picks, pantry favorites, and little treats for every table.</p>
+        <a class="hero-link" href="#products">Shop the groceries <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-note"><span>FRESH DAILY</span><span class="hero-note-line"></span><span>Goodness from near and far</span></div>
+      <div class="hero-stamp" aria-hidden="true"><span>GOOD FOOD<br>GOOD MOOD</span><b>✳</b></div>
+    </section>
+
+    <section class="benefits" aria-label="Shopping benefits">
+      <div><span class="benefit-symbol">✳</span><span>Fresh picks, every day</span></div>
+      <div><span class="benefit-symbol">↗</span><span>Free delivery over ₹4,758</span></div>
+      <div><span class="benefit-symbol">◌</span><span>Goodness from local growers</span></div>
+      <div><span class="benefit-symbol">♡</span><span>Carefully packed with love</span></div>
+    </section>
+
+    <section class="shop-section" id="products">
+      <div class="section-heading">
+        <div><span class="section-eyebrow">FRESH PICKS FROM SAKIB'S MARKET</span><h2>Good food, <em>right here.</em></h2><p>Fresh, flavorful favorites for your fridge, pantry, and table.</p></div>
+        <label class="sort-control"><span>Sort by</span><select id="sort-products" aria-label="Sort products"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A to Z</option></select><span class="sort-chevron" aria-hidden="true">⌄</span></label>
+      </div>
+      <div class="shop-toolbar">
+        <div class="category-filters" id="category-filters" aria-label="Filter by category">
+          <button class="filter-chip active" data-category="all" type="button">Everything <span>08</span></button>
+          <button class="filter-chip" data-category="fresh" type="button">Fresh <span>03</span></button>
+          <button class="filter-chip" data-category="pantry" type="button">Pantry <span>02</span></button>
+          <button class="filter-chip" data-category="snacks" type="button">Snacks <span>02</span></button>
+          <button class="filter-chip" data-category="drinks" type="button">Drinks <span>01</span></button>
+        </div>
+        <span class="result-count" id="result-count">Showing 8 good things</span>
+      </div>
+      <div class="product-grid" id="product-grid">
+        <article class="product-card" data-product-id="avocados" data-category="fresh" data-price="332" data-name="Ripe & Ready Avocados">
+          <div class="product-photo"><img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&amp;fit=crop&amp;w=720&amp;q=82" alt="Fresh ripe avocados" loading="lazy"><span class="product-badge">GROWER PICK</span><button class="favorite-button" type="button" aria-label="Add Ripe & Ready Avocados to favorites">♡</button><button class="quick-add" type="button">Add to bag <span>+</span></button></div>
+          <div class="product-info"><div><span class="product-category">FRESH · RIPE & READY</span><h3>Ripe & Ready Avocados</h3></div><span class="product-price">₹332</span></div><p class="product-description">Creamy, dreamy, and ready for toast.</p><div class="swatches"><span class="swatch olive selected" title="Fresh avocado"></span></div>
+        </article>
+        <article class="product-card" data-product-id="strawberries" data-category="fresh" data-price="570" data-name="Sweet Strawberry Basket">
+          <div class="product-photo"><img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&amp;fit=crop&amp;w=720&amp;q=82" alt="A basket of fresh red strawberries" loading="lazy"><span class="product-badge badge-new">IN SEASON</span><button class="favorite-button" type="button" aria-label="Add Sweet Strawberry Basket to favorites">♡</button><button class="quick-add" type="button">Add to bag <span>+</span></button></div>
+          <div class="product-info"><div><span class="product-category">FRESH · SEASONAL FRUIT</span><h3>Sweet Strawberry Basket</h3></div><span class="product-price">₹570</span></div><p class="product-description">Bright, juicy berries picked at their best.</p><div class="swatches"><span class="swatch clay selected" title="Strawberry red"></span></div>
+        </article>
+        <article class="product-card" data-product-id="tomatoes" data-category="fresh" data-price="456" data-name="Heirloom Tomatoes">
+          <div class="product-photo"><img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&amp;fit=crop&amp;w=720&amp;q=82" alt="Fresh heirloom tomatoes on the vine" loading="lazy"><button class="favorite-button" type="button" aria-label="Add Heirloom Tomatoes to favorites">♡</button><button class="quick-add" type="button">Add to bag <span>+</span></button></div>
+          <div class="product-info"><div><span class="product-category">FRESH · FARM GROWN</span><h3>Heirloom Tomatoes</h3></div><span class="product-price">₹456</span></div><p class="product-description">Sun-ripened, full of flavor, ready to share.</p><div class="swatches"><span class="swatch clay selected" title="Tomato red"></span></div>
+        </article>
+        <article class="product-card" data-product-id="sourdough" data-category="pantry" data-price="619" data-name="Country Sourdough Loaf">
+          <div class="product-photo"><img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&amp;fit=crop&amp;w=720&amp;q=82" alt="Fresh crusty artisan sourdough bread" loading="lazy"><span class="product-badge badge-limited">BAKED TODAY</span><button class="favorite-button" type="button" aria-label="Add Country Sourdough Loaf to favorites">♡</button><button class="quick-add" type="button">Add to bag <span>+</span></button></div>
+          <div class="product-info"><div><span class="product-category">PANTRY · SLOW FERMENTED</span><h3>Country Sourdough Loaf</h3></div><span class="product-price">₹619</span></div><p class="product-description">A golden crust and a little extra tang.</p><div class="swatches"><span class="swatch wood selected" title="Fresh baked"></span></div>
+        </article>
+        <article class="product-card" data-product-id="olive-oil" data-category="pantry" data-price="1332" data-name="Golden Grove Olive Oil">
+          <div class="product-photo"><img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&amp;fit=crop&amp;w=720&amp;q=82" alt="Golden extra virgin olive oil" loading="lazy"><button class="favorite-button" type="button" aria-label="Add Golden Grove Olive Oil to favorites">♡</button><button class="quick-add" type="button">Add to bag <span>+</span></button></div>
+          <div class="product-info"><div><span class="product-category">PANTRY · EXTRA VIRGIN</span><h3>Golden Grove Olive Oil</h3></div><span class="product-price">₹1,332</span></div><p class="product-description">Peppery, smooth, and lovely on everything.</p><div class="swatches"><span class="swatch moss selected" title="Golden olive oil"></span></div>
+        </article>
+        <article class="product-card" data-product-id="almonds" data-category="snacks" data-price="523" data-name="Sea Salt Almonds">
+          <div class="product-photo"><img src="https://images.unsplash.com/photo-1505576633757-0ac1084af824?auto=format&amp;fit=crop&amp;w=720&amp;q=82" alt="Crunchy almonds for a simple snack" loading="lazy"><span class="product-badge badge-new">PANTRY FAVORITE</span><button class="favorite-button" type="button" aria-label="Add Sea Salt Almonds to favorites">♡</button><button class="quick-add" type="button">Add to bag <span>+</span></button></div>
+          <div class="product-info"><div><span class="product-category">SNACKS · LIGHTLY SALTED</span><h3>Sea Salt Almonds</h3></div><span class="product-price">₹523</span></div><p class="product-description">A handful of feel-good, anytime crunch.</p><div class="swatches"><span class="swatch wood selected" title="Roasted almonds"></span></div>
+        </article>
+        <article class="product-card" data-product-id="chocolate" data-category="snacks" data-price="404" data-name="Dark Chocolate Bites">
+          <div class="product-photo"><img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&amp;fit=crop&amp;w=720&amp;q=82" alt="Rich dark chocolate pieces to share" loading="lazy"><button class="favorite-button" type="button" aria-label="Add Dark Chocolate Bites to favorites">♡</button><button class="quick-add" type="button">Add to bag <span>+</span></button></div>
+          <div class="product-info"><div><span class="product-category">SNACKS · 70% CACAO</span><h3>Dark Chocolate Bites</h3></div><span class="product-price">₹404</span></div><p class="product-description">A little square of something wonderful.</p><div class="swatches"><span class="swatch charcoal selected" title="Dark chocolate"></span></div>
+        </article>
+        <article class="product-card" data-product-id="coffee" data-category="drinks" data-price="1142" data-name="Morning Ritual Coffee">
+          <div class="product-photo"><img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?auto=format&amp;fit=crop&amp;w=720&amp;q=82" alt="Freshly roasted coffee beans" loading="lazy"><span class="product-badge badge-limited">SMALL BATCH</span><button class="favorite-button" type="button" aria-label="Add Morning Ritual Coffee to favorites">♡</button><button class="quick-add" type="button">Add to bag <span>+</span></button></div>
+          <div class="product-info"><div><span class="product-category">DRINKS · WHOLE BEAN</span><h3>Morning Ritual Coffee</h3></div><span class="product-price">₹1,142</span></div><p class="product-description">A smooth, cozy start to the good stuff.</p><div class="swatches"><span class="swatch charcoal selected" title="Whole bean coffee"></span></div>
+        </article>
+      </div>
+      <div class="no-results" id="no-results" hidden><span>✳</span><h3>Nothing here just yet.</h3><p>Try another search or explore everything we have.</p><button id="clear-filters" type="button">Clear filters</button></div>
+      <div class="shop-endnote"><span>✳</span><p>Goodness in every basket.</p></div>
+    </section>
+
+    <section class="story-section" id="featured">
+      <div class="story-image"><img src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Fresh local vegetables at the market"></div>
+      <div class="story-copy"><span class="section-eyebrow">A NOTE FROM SAKIB</span><h2>Fresh from<br><em>good people.</em></h2><p>We love food that brings people together. That's why we look for beautiful produce, pantry staples, and snacks from growers and makers who care about what they do.</p><a href="#newsletter" class="story-link">A little more about our market <span>↗</span></a><span class="story-scribble" aria-hidden="true">good things grow ✳</span></div>
+    </section>
+
+    <section class="newsletter-section" id="newsletter"><span class="section-eyebrow">A GOOD THING IN YOUR INBOX</span><h2>Fresh notes, <em>from Sakib.</em></h2><p>Seasonal picks, simple recipes, and the occasional little treat. Straight from our market to your inbox.</p><form class="newsletter-form" id="newsletter-form"><label class="visually-hidden" for="email-input">Your email address</label><input id="email-input" type="email" placeholder="Your email address" required><button type="submit">Count me in <span>→</span></button></form><span class="newsletter-fineprint">By joining, you're happy to hear from us. Unsubscribe whenever.</span><div class="newsletter-stamp" aria-hidden="true">GOOD<br>THINGS<br>INSIDE</div></section>
+  </main>
+
+  <footer class="site-footer"><a class="wordmark footer-wordmark" href="#">sakib<span>.</span><small>FRESH MARKET</small></a><span>Good food, good mood.</span><div><a href="#products">Groceries</a><a href="#featured">Our market</a><a href="#newsletter">Recipes</a></div><small class="copyright">© 2026 Sakib's Market</small></footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="drawer-heading"><div><span class="section-eyebrow">FRESH FROM OUR MARKET</span><h2 id="cart-title">Your basket <span id="drawer-count">(0)</span></h2></div><button class="close-drawer" id="close-cart" type="button" aria-label="Close shopping basket">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span>✳</span><h3>Room for something good.</h3><p>Your basket is waiting for a fresh pick.</p><button id="continue-shopping" type="button">Keep browsing <span>→</span></button></div>
+    <div class="drawer-footer" id="drawer-footer" hidden><p class="shipping-note" id="shipping-note"></p><div class="shipping-track"><span id="shipping-progress"></span></div><div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal">₹0</strong></div><p class="tax-note">Delivery and taxes calculated at checkout.</p><button class="checkout-button" id="checkout-button" type="button">Continue to checkout <span>→</span></button><p class="secure-note">♡ &nbsp; Packed with care by Sakib's Market</p></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
